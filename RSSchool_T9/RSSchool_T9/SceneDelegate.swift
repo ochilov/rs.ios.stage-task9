@@ -25,10 +25,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		window.makeKeyAndVisible()
     }
 	
-	var rootViewController: UIViewController {
-		let vc = UIViewController()
-		vc.view.layer.backgroundColor = UIColor.systemYellow.cgColor
-		return vc
+	private var rootViewController: UIViewController {
+		let tabBar = UITabBarController()
+		
+		// add view controllers
+		let collectionsVC = CollectionsViewController()
+		let settingsVC = SettingsViewController()
+		tabBar.setViewControllers([collectionsVC, settingsVC], animated: false)
+		
+		return tabBar
 	}
 }
 
