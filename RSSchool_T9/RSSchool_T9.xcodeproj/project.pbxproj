@@ -29,6 +29,7 @@
 		B2BA3BB126B4BF2C001AA6D6 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA3BB026B4BF2C001AA6D6 /* UIColor+Extensions.swift */; };
 		B2BA3BB326B540EA001AA6D6 /* RSSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA3BB226B540EA001AA6D6 /* RSSettings.swift */; };
 		B2BA3BB826B5DD6D001AA6D6 /* CollectionViewItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA3BB726B5DD6D001AA6D6 /* CollectionViewItemCell.swift */; };
+		B2BA3BBA26B5ECA2001AA6D6 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA3BB926B5ECA2001AA6D6 /* GradientView.swift */; };
 		B2D4014F26B3C9A300C7F11C /* CollectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D4014E26B3C9A300C7F11C /* CollectionsViewController.swift */; };
 		B2D4015326B3CA1A00C7F11C /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2D4015226B3CA1A00C7F11C /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,7 @@
 		B2BA3BB026B4BF2C001AA6D6 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		B2BA3BB226B540EA001AA6D6 /* RSSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSettings.swift; sourceTree = "<group>"; };
 		B2BA3BB726B5DD6D001AA6D6 /* CollectionViewItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewItemCell.swift; sourceTree = "<group>"; };
+		B2BA3BB926B5ECA2001AA6D6 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		B2D4014E26B3C9A300C7F11C /* CollectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsViewController.swift; sourceTree = "<group>"; };
 		B2D4015026B3CA1A00C7F11C /* RSSchool_T9-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RSSchool_T9-Bridging-Header.h"; sourceTree = "<group>"; };
 		B2D4015126B3CA1A00C7F11C /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				B2BA3BB026B4BF2C001AA6D6 /* UIColor+Extensions.swift */,
+				B2BA3BB926B5ECA2001AA6D6 /* GradientView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				2BB9F30126AF557E00F43852 /* story-2-path.swift in Sources */,
 				2BB9E75C26AB605700112651 /* AppDelegate.swift in Sources */,
 				B2D4015326B3CA1A00C7F11C /* SettingsViewController.m in Sources */,
+				B2BA3BBA26B5ECA2001AA6D6 /* GradientView.swift in Sources */,
 				B2BA3BB826B5DD6D001AA6D6 /* CollectionViewItemCell.swift in Sources */,
 				2BB9F30B26AF5EEC00F43852 /* story-3-path.swift in Sources */,
 				2BB9F29126ADFAF100F43852 /* Data.swift in Sources */,
