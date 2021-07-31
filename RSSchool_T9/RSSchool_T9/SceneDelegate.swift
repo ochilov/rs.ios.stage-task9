@@ -31,7 +31,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		// add view controllers
 		let collectionsVC = CollectionsViewController()
 		let settingsVC = SettingsViewController()
-		tabBar.setViewControllers([collectionsVC, settingsVC], animated: false)
+		let settingsCommonVC = UINavigationController(rootViewController: settingsVC)
+		tabBar.setViewControllers([collectionsVC, settingsCommonVC], animated: false)
+		
+		// setup tab bar
+		collectionsVC.title = "Collections"
+		collectionsVC.tabBarItem.image = UIImage(systemName: "square.grid.2x2")
+		
+		settingsVC.title = "Settings"
+		settingsCommonVC.title = settingsVC.title
+		settingsCommonVC.tabBarItem.image = UIImage(systemName:"gear")
 		
 		return tabBar
 	}

@@ -30,8 +30,6 @@ class CollectionsViewController: UIViewController {
 	}
 	
 	private func setupViews() {
-		self.title = "Collections"
-		self.tabBarItem.image = UIImage(systemName: "square.grid.2x2")
-		self.view.layer.backgroundColor = UIColor.systemRed.cgColor
+		self.view.layer.backgroundColor = UIColor.systemBackground.cgColor
 	}
 }
