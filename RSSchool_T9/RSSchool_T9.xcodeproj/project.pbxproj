@@ -184,14 +184,30 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		B2D4014D26B3C98E00C7F11C /* Controllers */ = {
+		B2BA3BB526B5DCDA001AA6D6 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				B2D4014E26B3C9A300C7F11C /* CollectionsViewController.swift */,
 				B2D4015126B3CA1A00C7F11C /* SettingsViewController.h */,
 				B2D4015226B3CA1A00C7F11C /* SettingsViewController.m */,
 				B2BA3BAC26B4B802001AA6D6 /* StrokeColorsViewController.h */,
 				B2BA3BAD26B4B802001AA6D6 /* StrokeColorsViewController.m */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		B2BA3BB626B5DCF2001AA6D6 /* Collections */ = {
+			isa = PBXGroup;
+			children = (
+				B2D4014E26B3C9A300C7F11C /* CollectionsViewController.swift */,
+			);
+			path = Collections;
+			sourceTree = "<group>";
+		};
+		B2D4014D26B3C98E00C7F11C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B2BA3BB626B5DCF2001AA6D6 /* Collections */,
+				B2BA3BB526B5DCDA001AA6D6 /* Settings */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
