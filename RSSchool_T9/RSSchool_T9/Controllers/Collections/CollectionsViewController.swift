@@ -30,7 +30,7 @@ class CollectionsViewController: UIViewController {
 	
 	// view style
 	private func initStyle() {
-		self.view.layer.backgroundColor = UIColor.systemBackground.cgColor
+		self.view.layer.backgroundColor = UIColor.contentBackground.cgColor
 	}
 	
 	// collection view style
@@ -46,7 +46,7 @@ class CollectionsViewController: UIViewController {
 		collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
 		collectionView.register(CollectionViewItemCell.self, forCellWithReuseIdentifier: CollectionViewItemCell.reuseID)
 		
-		collectionView.backgroundColor = UIColor.systemBackground
+		collectionView.backgroundColor = UIColor.contentBackground
 		collectionView.dataSource = self
 		collectionView.delegate = self
 	}

@@ -43,7 +43,7 @@ typedef enum : NSUInteger {
 }
 
 - (void)initStyle {
-	self.view.layer.backgroundColor = [UIColor colorNamed:@"controlBackgroundColor"].CGColor;
+	self.view.layer.backgroundColor = UIColor.controlBackground.CGColor;
 }
 
 - (void)setupViews {

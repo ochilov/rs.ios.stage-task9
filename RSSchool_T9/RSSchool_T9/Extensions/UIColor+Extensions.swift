@@ -28,4 +28,34 @@ import Foundation
 		let r = (rgb >> 16) & 0xFF;
 		self.init(red: CGFloat(r)/255.0, green: CGFloat(g)/255.0, blue: CGFloat(b)/255.0, alpha: 1.0)
 	}
+	
+	open class var controlBackground: UIColor {
+		get {
+			return UIColor(named: "controlBackgroundColor") ?? UIColor.systemGray6
+		}
+	}
+	
+	// content colors
+	open class var contentBackground: UIColor {
+		get {
+			return UIColor(named: "contentBackgroundColor") ?? UIColor.systemBackground
+		}
+	}
+	open class var contentBorder: UIColor {
+		get {
+			return UIColor(named: "contentBorderColor") ?? UIColor.black
+		}
+	}
+	
+	// detail-module colors
+	open class var detailBackground: UIColor {
+		get {
+			return UIColor(named: "detailBackgroundColor") ?? UIColor.black
+		}
+	}
+	open class var detailBorder: UIColor {
+		get {
+			return UIColor(named: "detailBorderColor") ?? UIColor.white
+		}
+	}
 }

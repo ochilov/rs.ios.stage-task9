@@ -29,15 +29,16 @@ class CollectionViewItemCell: UICollectionViewCell {
 	func setupViews() {
 		// content with border
 		contentView.layer.cornerRadius = 18
-		contentView.layer.borderColor = UIColor.black.cgColor
+		contentView.layer.borderColor = UIColor.contentBorder.cgColor
 		contentView.layer.borderWidth = 1.0
 		
 		
 		// image view with border
+		let borderWidth: CGFloat = 1
 		imageView.contentMode = .scaleAspectFill
 		imageView.layer.cornerRadius = 10
-		imageView.layer.borderWidth = 1
-		imageView.layer.borderColor = UIColor.black.cgColor
+		imageView.layer.borderWidth = borderWidth
+		imageView.layer.borderColor = UIColor.contentBorder.cgColor
 		imageView.layer.masksToBounds = true
 		contentView.addSubview(imageView)
 		
@@ -60,9 +61,9 @@ class CollectionViewItemCell: UICollectionViewCell {
 		gradientView.translatesAutoresizingMaskIntoConstraints = false
 		NSLayoutConstraint.activate([
 			gradientView.heightAnchor.constraint(equalTo: imageView.heightAnchor, multiplier: 0.35),
-			gradientView.bottomAnchor.constraint(equalTo: imageView.bottomAnchor),
-			gradientView.leadingAnchor.constraint(equalTo: imageView.leadingAnchor),
-			gradientView.trailingAnchor.constraint(equalTo: imageView.trailingAnchor),
+			gradientView.bottomAnchor.constraint(equalTo: imageView.bottomAnchor, constant: -borderWidth),
+			gradientView.leadingAnchor.constraint(equalTo: imageView.leadingAnchor, constant: borderWidth),
+			gradientView.trailingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: -borderWidth),
 		])
 		
 		
