@@ -75,7 +75,7 @@ extension RSStrokeCollectionView: UICollectionViewDataSource {
 			let animateDraw = CABasicAnimation(keyPath: "strokeEnd")
 			animateDraw.fromValue = 0.0
 			animateDraw.toValue = 1.0
-			animateDraw.duration = 1.0
+			animateDraw.duration = 3.0
 			animateDraw.repeatCount = 0
 			animateDraw.autoreverses = false
 			animateDraw.isRemovedOnCompletion = false
