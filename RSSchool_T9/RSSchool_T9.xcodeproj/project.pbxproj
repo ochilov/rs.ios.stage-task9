@@ -34,6 +34,9 @@
 		B2BA3BBF26B6D37D001AA6D6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA3BBE26B6D37D001AA6D6 /* DetailViewController.swift */; };
 		B2BA3BC126B6E608001AA6D6 /* DetailCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA3BC026B6E608001AA6D6 /* DetailCoverView.swift */; };
 		B2BA3BC526B73A3D001AA6D6 /* RSPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA3BC426B73A3C001AA6D6 /* RSPaddingLabel.swift */; };
+		B2BA3BC726B759FE001AA6D6 /* StoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA3BC626B759FE001AA6D6 /* StoryDetailViewController.swift */; };
+		B2BA3BC926B75B23001AA6D6 /* GalleryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA3BC826B75B23001AA6D6 /* GalleryDetailViewController.swift */; };
+		B2BA3BCB26B7E748001AA6D6 /* RSStrokeCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA3BCA26B7E748001AA6D6 /* RSStrokeCollectionView.swift */; };
 		B2D4014F26B3C9A300C7F11C /* CollectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D4014E26B3C9A300C7F11C /* CollectionsViewController.swift */; };
 		B2D4015326B3CA1A00C7F11C /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2D4015226B3CA1A00C7F11C /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
@@ -69,6 +72,9 @@
 		B2BA3BBE26B6D37D001AA6D6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B2BA3BC026B6E608001AA6D6 /* DetailCoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoverView.swift; sourceTree = "<group>"; };
 		B2BA3BC426B73A3C001AA6D6 /* RSPaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSPaddingLabel.swift; sourceTree = "<group>"; };
+		B2BA3BC626B759FE001AA6D6 /* StoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDetailViewController.swift; sourceTree = "<group>"; };
+		B2BA3BC826B75B23001AA6D6 /* GalleryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDetailViewController.swift; sourceTree = "<group>"; };
+		B2BA3BCA26B7E748001AA6D6 /* RSStrokeCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSStrokeCollectionView.swift; sourceTree = "<group>"; };
 		B2D4014E26B3C9A300C7F11C /* CollectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsViewController.swift; sourceTree = "<group>"; };
 		B2D4015026B3CA1A00C7F11C /* RSSchool_T9-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RSSchool_T9-Bridging-Header.h"; sourceTree = "<group>"; };
 		B2D4015126B3CA1A00C7F11C /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
@@ -215,6 +221,8 @@
 				B2BA3BB726B5DD6D001AA6D6 /* CollectionViewItemCell.swift */,
 				B2BA3BBE26B6D37D001AA6D6 /* DetailViewController.swift */,
 				B2BA3BC026B6E608001AA6D6 /* DetailCoverView.swift */,
+				B2BA3BC626B759FE001AA6D6 /* StoryDetailViewController.swift */,
+				B2BA3BC826B75B23001AA6D6 /* GalleryDetailViewController.swift */,
 			);
 			path = Collections;
 			sourceTree = "<group>";
@@ -225,6 +233,7 @@
 				B2BA3BBC26B5FC06001AA6D6 /* RSCloseButton.swift */,
 				B2BA3BC426B73A3C001AA6D6 /* RSPaddingLabel.swift */,
 				B2BA3BB926B5ECA2001AA6D6 /* GradientView.swift */,
+				B2BA3BCA26B7E748001AA6D6 /* RSStrokeCollectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -325,8 +334,11 @@
 				2BB9F30126AF557E00F43852 /* story-2-path.swift in Sources */,
 				2BB9E75C26AB605700112651 /* AppDelegate.swift in Sources */,
 				B2BA3BC526B73A3D001AA6D6 /* RSPaddingLabel.swift in Sources */,
+				B2BA3BC926B75B23001AA6D6 /* GalleryDetailViewController.swift in Sources */,
 				B2D4015326B3CA1A00C7F11C /* SettingsViewController.m in Sources */,
+				B2BA3BC726B759FE001AA6D6 /* StoryDetailViewController.swift in Sources */,
 				B2BA3BBA26B5ECA2001AA6D6 /* GradientView.swift in Sources */,
+				B2BA3BCB26B7E748001AA6D6 /* RSStrokeCollectionView.swift in Sources */,
 				B2BA3BB826B5DD6D001AA6D6 /* CollectionViewItemCell.swift in Sources */,
 				2BB9F30B26AF5EEC00F43852 /* story-3-path.swift in Sources */,
 				2BB9F29126ADFAF100F43852 /* Data.swift in Sources */,

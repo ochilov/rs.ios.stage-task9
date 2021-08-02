@@ -81,7 +81,7 @@ class DetailCoverView: UIView {
 		])
 		
 		// set view bottom anchor to correct calculate view bounds
-		self.bottomAnchor.constraint(greaterThanOrEqualTo: devider.bottomAnchor, constant: 40).isActive = true
+		self.bottomAnchor.constraint(greaterThanOrEqualTo: devider.bottomAnchor, constant: 10).isActive = true
 	}
 	
 	//

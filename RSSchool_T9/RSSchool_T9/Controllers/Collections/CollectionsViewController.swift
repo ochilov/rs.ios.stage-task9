@@ -110,5 +110,23 @@ extension CollectionsViewController: UICollectionViewDataSource {
 
 // MARK: UICollectionViewDelegateFlowLayout
 extension CollectionsViewController: UICollectionViewDelegateFlowLayout {
-	
+	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		guard let item = datasource?[indexPath.item] else {fatalError("No item")}
+		
+		var detailViewController: DetailViewController? = nil
+		switch item {
+		case .gallery(let gallerey):
+			let vc = GalleryDetailViewController()
+			vc.update(withContent: gallerey)
+			detailViewController = vc
+		case .story(let story):
+			let vc = StoryDetailViewController()
+			vc.update(withContent: story)
+			detailViewController = vc
+		}
+		
+		guard let detailViewController = detailViewController else {return}
+		detailViewController.modalPresentationStyle = .fullScreen
+		present(detailViewController, animated: true)
+	}
 }
