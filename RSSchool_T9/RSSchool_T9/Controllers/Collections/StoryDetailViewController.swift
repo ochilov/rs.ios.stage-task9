@@ -21,17 +21,17 @@ class StoryDetailViewController: DetailViewController {
 		contentView.addSubview(strokeCollectionView)
 		NSLayoutConstraint.activate([
 			strokeCollectionView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0),
-			strokeCollectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
-			strokeCollectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
-			strokeCollectionView.heightAnchor.constraint(equalToConstant: 140)
+			strokeCollectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+			strokeCollectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+			strokeCollectionView.heightAnchor.constraint(equalToConstant: 120)
 		])
 		
 		// story-content
 		contentView.addSubview(contentText)
 		NSLayoutConstraint.activate([
 			contentText.topAnchor.constraint(equalTo: strokeCollectionView.bottomAnchor, constant: 10),
-			contentText.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
-			contentText.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20)
+			contentText.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+			contentText.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
 		])
 		
 		// !IMPORTANT: to correct calculate contentView HEIGHT

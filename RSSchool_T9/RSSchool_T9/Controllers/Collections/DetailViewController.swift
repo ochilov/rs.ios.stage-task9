@@ -32,6 +32,7 @@ class DetailViewController: UIViewController {
 			scrollView.frameLayoutGuide.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor),
 		])
 		let layoutGuide = scrollView.contentLayoutGuide
+		let edgeMargin: CGFloat = 20
 		
 		// close-button
 		scrollView.addSubview(closeButton)
@@ -46,20 +47,20 @@ class DetailViewController: UIViewController {
 		scrollView.addSubview(coverView)
 		NSLayoutConstraint.activate([
 			coverView.topAnchor.constraint(equalTo: layoutGuide.topAnchor, constant: 100),
-			coverView.leadingAnchor.constraint(equalTo: layoutGuide.leadingAnchor, constant: 20),
-			coverView.trailingAnchor.constraint(equalTo: layoutGuide.trailingAnchor, constant: -20)
+			coverView.leadingAnchor.constraint(equalTo: layoutGuide.leadingAnchor, constant: edgeMargin),
+			coverView.trailingAnchor.constraint(equalTo: layoutGuide.trailingAnchor, constant: -edgeMargin)
 		])
 		
 		// content-view to fill it
 		scrollView.addSubview(contentView)
 		NSLayoutConstraint.activate([
-			contentView.leftAnchor.constraint(equalTo: layoutGuide.leftAnchor),
-			contentView.rightAnchor.constraint(equalTo: layoutGuide.rightAnchor),
+			contentView.leadingAnchor.constraint(equalTo: layoutGuide.leadingAnchor, constant: edgeMargin),
+			contentView.trailingAnchor.constraint(equalTo: layoutGuide.trailingAnchor, constant: -edgeMargin),
 			contentView.topAnchor.constraint(equalTo: coverView.bottomAnchor, constant: 10),
 			contentView.bottomAnchor.constraint(equalTo: layoutGuide.bottomAnchor),
 			// we want vertical scrolling, so we want our content to be only as wide as
 			// the scroll view's Frame Layout Guide
-			contentView.widthAnchor.constraint(equalTo: scrollView.frameLayoutGuide.widthAnchor),
+			contentView.widthAnchor.constraint(equalTo: scrollView.frameLayoutGuide.widthAnchor, constant: -edgeMargin*2),
 		])
 		
 		// !IMPORTANT: to correct calculate contentView HEIGHT
