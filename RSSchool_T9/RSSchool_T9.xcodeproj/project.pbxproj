@@ -25,6 +25,7 @@
 		2BB9F30E26AF5FA900F43852 /* story-4-path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB9F30D26AF5FA900F43852 /* story-4-path.swift */; };
 		2BB9F31026AF5FB300F43852 /* s4-text.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2BB9F30F26AF5FB300F43852 /* s4-text.txt */; };
 		2BB9F31226AF5FBE00F43852 /* s4-title.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2BB9F31126AF5FBE00F43852 /* s4-title.txt */; };
+		B215495B26B9DF4000B70B62 /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B215495A26B9DF4000B70B62 /* ImageScrollView.swift */; };
 		B2BA3BAE26B4B802001AA6D6 /* StrokeColorsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2BA3BAD26B4B802001AA6D6 /* StrokeColorsViewController.m */; };
 		B2BA3BB126B4BF2C001AA6D6 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA3BB026B4BF2C001AA6D6 /* UIColor+Extensions.swift */; };
 		B2BA3BB326B540EA001AA6D6 /* RSSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA3BB226B540EA001AA6D6 /* RSSettings.swift */; };
@@ -37,6 +38,7 @@
 		B2BA3BC726B759FE001AA6D6 /* StoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA3BC626B759FE001AA6D6 /* StoryDetailViewController.swift */; };
 		B2BA3BC926B75B23001AA6D6 /* GalleryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA3BC826B75B23001AA6D6 /* GalleryDetailViewController.swift */; };
 		B2BA3BCB26B7E748001AA6D6 /* RSStrokeCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA3BCA26B7E748001AA6D6 /* RSStrokeCollectionView.swift */; };
+		B2BA3BCD26B877C5001AA6D6 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA3BCC26B877C5001AA6D6 /* ImageViewController.swift */; };
 		B2D4014F26B3C9A300C7F11C /* CollectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D4014E26B3C9A300C7F11C /* CollectionsViewController.swift */; };
 		B2D4015326B3CA1A00C7F11C /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2D4015226B3CA1A00C7F11C /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
@@ -62,6 +64,7 @@
 		2BB9F30D26AF5FA900F43852 /* story-4-path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "story-4-path.swift"; sourceTree = "<group>"; };
 		2BB9F30F26AF5FB300F43852 /* s4-text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "s4-text.txt"; sourceTree = "<group>"; };
 		2BB9F31126AF5FBE00F43852 /* s4-title.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "s4-title.txt"; sourceTree = "<group>"; };
+		B215495A26B9DF4000B70B62 /* ImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
 		B2BA3BAC26B4B802001AA6D6 /* StrokeColorsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StrokeColorsViewController.h; sourceTree = "<group>"; };
 		B2BA3BAD26B4B802001AA6D6 /* StrokeColorsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StrokeColorsViewController.m; sourceTree = "<group>"; };
 		B2BA3BB026B4BF2C001AA6D6 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
@@ -75,6 +78,7 @@
 		B2BA3BC626B759FE001AA6D6 /* StoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDetailViewController.swift; sourceTree = "<group>"; };
 		B2BA3BC826B75B23001AA6D6 /* GalleryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDetailViewController.swift; sourceTree = "<group>"; };
 		B2BA3BCA26B7E748001AA6D6 /* RSStrokeCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSStrokeCollectionView.swift; sourceTree = "<group>"; };
+		B2BA3BCC26B877C5001AA6D6 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		B2D4014E26B3C9A300C7F11C /* CollectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsViewController.swift; sourceTree = "<group>"; };
 		B2D4015026B3CA1A00C7F11C /* RSSchool_T9-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RSSchool_T9-Bridging-Header.h"; sourceTree = "<group>"; };
 		B2D4015126B3CA1A00C7F11C /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
@@ -223,6 +227,7 @@
 				B2BA3BC026B6E608001AA6D6 /* DetailCoverView.swift */,
 				B2BA3BC626B759FE001AA6D6 /* StoryDetailViewController.swift */,
 				B2BA3BC826B75B23001AA6D6 /* GalleryDetailViewController.swift */,
+				B2BA3BCC26B877C5001AA6D6 /* ImageViewController.swift */,
 			);
 			path = Collections;
 			sourceTree = "<group>";
@@ -234,6 +239,7 @@
 				B2BA3BC426B73A3C001AA6D6 /* RSPaddingLabel.swift */,
 				B2BA3BB926B5ECA2001AA6D6 /* GradientView.swift */,
 				B2BA3BCA26B7E748001AA6D6 /* RSStrokeCollectionView.swift */,
+				B215495A26B9DF4000B70B62 /* ImageScrollView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -341,6 +347,7 @@
 				B2BA3BCB26B7E748001AA6D6 /* RSStrokeCollectionView.swift in Sources */,
 				B2BA3BB826B5DD6D001AA6D6 /* CollectionViewItemCell.swift in Sources */,
 				2BB9F30B26AF5EEC00F43852 /* story-3-path.swift in Sources */,
+				B215495B26B9DF4000B70B62 /* ImageScrollView.swift in Sources */,
 				2BB9F29126ADFAF100F43852 /* Data.swift in Sources */,
 				B2BA3BC126B6E608001AA6D6 /* DetailCoverView.swift in Sources */,
 				2BB9F2EC26AF1F6200F43852 /* story-1-path.swift in Sources */,
@@ -348,6 +355,7 @@
 				2BB9F30E26AF5FA900F43852 /* story-4-path.swift in Sources */,
 				2BB9E75E26AB605700112651 /* SceneDelegate.swift in Sources */,
 				B2BA3BAE26B4B802001AA6D6 /* StrokeColorsViewController.m in Sources */,
+				B2BA3BCD26B877C5001AA6D6 /* ImageViewController.swift in Sources */,
 				B2BA3BB326B540EA001AA6D6 /* RSSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

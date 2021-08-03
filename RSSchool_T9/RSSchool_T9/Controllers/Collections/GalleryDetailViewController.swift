@@ -99,8 +99,7 @@ extension GalleryDetailViewController: UICollectionViewDataSource {
 extension GalleryDetailViewController: UICollectionViewDelegateFlowLayout {
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		let item = gallery[indexPath.item]
-		let imageVC = ImageViewController()
-		imageVC.imageView.image = item
+		let imageVC = ImageViewController(image: item)
 		imageVC.modalPresentationStyle = .fullScreen
 		present(imageVC, animated: true)
 	}
