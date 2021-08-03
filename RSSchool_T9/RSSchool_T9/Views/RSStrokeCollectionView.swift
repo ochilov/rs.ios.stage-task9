@@ -31,6 +31,7 @@ class RSStrokeCollectionView: UIView {
 		collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "UICollectionViewCell")
 		collectionView.backgroundColor = UIColor.detailBackground
 		collectionView.dataSource = self
+		collectionView.delegate = self
 		collectionView.translatesAutoresizingMaskIntoConstraints = false
 		self.addSubview(collectionView)
 		NSLayoutConstraint.activate([
@@ -44,7 +45,7 @@ class RSStrokeCollectionView: UIView {
 	public var paths:[CGPath] = []
 }
 
-// MARK: UICollectionViewDataSource
+// MARK:- UICollectionViewDataSource
 extension RSStrokeCollectionView: UICollectionViewDataSource {
 
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -54,7 +55,14 @@ extension RSStrokeCollectionView: UICollectionViewDataSource {
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UICollectionViewCell",
 															for: indexPath)
-		
+		return cell
+	}
+}
+
+
+// MARK:- UICollectionViewDelegate
+extension RSStrokeCollectionView: UICollectionViewDelegate {
+	func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
 		let path = paths[indexPath.item]
 		
 		let view = cell.contentView
@@ -82,8 +90,10 @@ extension RSStrokeCollectionView: UICollectionViewDataSource {
 			animateDraw.fillMode = .forwards
 			shape.add(animateDraw, forKey: "strokeEnd")
 		}
-		
-		return cell
+	}
+	
+	func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+		cell.contentView.layer.removeAllAnimations()
+		cell.contentView.layer.sublayers?.removeAll()
 	}
 }
-
