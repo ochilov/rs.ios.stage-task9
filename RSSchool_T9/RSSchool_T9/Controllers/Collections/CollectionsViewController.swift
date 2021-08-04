@@ -35,13 +35,16 @@ class CollectionsViewController: UIViewController {
 	
 	// collection view style
 	private var collectionViewNumberOfColumns: CGFloat = 2
+	private var collectionViewSpacing: CGFloat = 16
+	private var collectionViewEdges: CGFloat = 20
 	private var collectionView: UICollectionView! = nil
 	private func setupCollectionView() {
 		let layout = UICollectionViewFlowLayout()
 		layout.scrollDirection = .vertical
-		layout.minimumLineSpacing = 16
-		layout.minimumInteritemSpacing = 16
-		layout.sectionInset = UIEdgeInsets(top: 40, left: 20, bottom: 50, right: 20)
+		layout.minimumLineSpacing = collectionViewSpacing
+		layout.minimumInteritemSpacing = collectionViewSpacing
+		layout.itemSize = .init(width: 179, height: 220)
+		layout.sectionInset = UIEdgeInsets(top: 40, left: collectionViewEdges, bottom: 50, right: collectionViewEdges)
 		
 		collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
 		collectionView.register(CollectionViewItemCell.self, forCellWithReuseIdentifier: CollectionViewItemCell.reuseID)
@@ -89,21 +92,42 @@ extension CollectionsViewController: UICollectionViewDataSource {
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-
-		var space: CGFloat = 0.0
-		if let flowlayout = collectionViewLayout as? UICollectionViewFlowLayout {
-			space = flowlayout.sectionInset.left
-				  + flowlayout.sectionInset.right
-				  + flowlayout.minimumInteritemSpacing * (collectionViewNumberOfColumns - 1)
-		}
-		var width: CGFloat = (collectionView.frame.size.width - space) / collectionViewNumberOfColumns
+		guard let flowlayout = collectionViewLayout as? UICollectionViewFlowLayout else {return .init(width: 20, height: 20)}
 		
-		// limit max size
-		let maxWidth: CGFloat = (max(collectionView.frame.size.width, collectionView.frame.size.height) - space) / collectionViewNumberOfColumns * 0.75
-		width = min(width, maxWidth)
-		let height = width * 1.22905
-
-		return CGSize(width: width, height: height)
+		var leftEdge  = collectionViewEdges
+		var rightEdge = collectionViewEdges
+		var minSpace  = collectionViewSpacing
+		var itemWidth = flowlayout.itemSize.width
+		let columns   = collectionViewNumberOfColumns
+		
+		
+		let realWidth = collectionView.frame.size.width-2
+		let needWidth = leftEdge
+					  + rightEdge
+					  + minSpace  * columns - 1
+					  + itemWidth * columns
+		
+		if realWidth >= needWidth {
+			// calc free space
+			let widthSpace = realWidth - needWidth
+			// proportional split free space
+			itemWidth += widthSpace * (itemWidth / needWidth)
+			leftEdge  += widthSpace * (leftEdge / needWidth)
+			rightEdge += widthSpace * (rightEdge / needWidth)
+			minSpace   = (realWidth - itemWidth * columns
+									- leftEdge
+									- rightEdge) / (columns - 1)
+		} else {
+			// item width constraints with min values of edges and interspaces
+			itemWidth = (realWidth - leftEdge - rightEdge - minSpace * (columns-1)) / columns
+		}
+		
+		// update layout with new data
+		flowlayout.sectionInset.left  = leftEdge
+		flowlayout.sectionInset.right = rightEdge
+		flowlayout.minimumInteritemSpacing = minSpace
+		
+		return CGSize(width: itemWidth, height: itemWidth * flowlayout.itemSize.height / flowlayout.itemSize.width)
 	}
 }
 
