@@ -52,7 +52,7 @@ class DetailCoverView: UIView {
 		NSLayoutConstraint.activate([
 			title.leadingAnchor.constraint(equalTo: imageView.leadingAnchor, constant: 30),
 			title.trailingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: -30),
-			title.bottomAnchor.constraint(equalTo: imageView.bottomAnchor, constant: -35)
+			title.bottomAnchor.constraint(equalTo: imageView.bottomAnchor, constant: -55)
 		])
 		
 		
@@ -101,9 +101,10 @@ class DetailCoverView: UIView {
 	public lazy var title: UILabel = {
 		let title = UILabel()
 		title.font = UIFont(name: "Rockwell", size: 48)
-		title.textColor = UIColor.detailBorder
+		title.textColor = UIColor.white
 		title.numberOfLines = 0
 		title.contentMode = .bottomLeft
+		title.lineBreakMode = .byWordWrapping
 		title.translatesAutoresizingMaskIntoConstraints = false
 		return title
 	}()
@@ -116,10 +117,10 @@ class DetailCoverView: UIView {
 		typeLabel.backgroundColor = UIColor.detailBackground
 		typeLabel.numberOfLines = 1
 		typeLabel.contentMode = .center
-		typeLabel.topInset = 8
-		typeLabel.bottomInset = 3
-		typeLabel.leftInset = 30
-		typeLabel.rightInset = 30
+		typeLabel.paddingTop = 8
+		typeLabel.paddingBottom = 3
+		typeLabel.paddingLeft = 30
+		typeLabel.paddingRight = 30
 		typeLabel.layer.cornerRadius = 8
 		typeLabel.layer.borderWidth = 1
 		typeLabel.layer.borderColor = UIColor.detailBorder.cgColor

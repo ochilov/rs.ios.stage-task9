@@ -9,23 +9,49 @@
 
 import UIKit
 
+@IBDesignable
 class RSPaddingLabel: UILabel {
-	@IBInspectable var topInset: CGFloat = 5.0
-	@IBInspectable var bottomInset: CGFloat = 5.0
-	@IBInspectable var leftInset: CGFloat = 5.0
-	@IBInspectable var rightInset: CGFloat = 5.0
-
-	override func drawText(in rect: CGRect) {
-		let insets = UIEdgeInsets(top: topInset, left: leftInset, bottom: bottomInset, right: rightInset)
-		super.drawText(in: rect.inset(by: insets))
+	var textEdgeInsets = UIEdgeInsets.zero {
+		didSet { invalidateIntrinsicContentSize() }
 	}
+	
+	open override func textRect(forBounds bounds: CGRect, limitedToNumberOfLines numberOfLines: Int) -> CGRect {
+		let insetRect = bounds.inset(by: textEdgeInsets)
+		let textRect = super.textRect(forBounds: insetRect, limitedToNumberOfLines: numberOfLines)
+		return textRect.inset(by: textEdgeInsets.inverted())
+	}
+	
+	override func drawText(in rect: CGRect) {
+		super.drawText(in: rect.inset(by: textEdgeInsets))
+	}
+	
+	@IBInspectable
+	var paddingLeft: CGFloat {
+		set { textEdgeInsets.left = newValue }
+		get { return textEdgeInsets.left }
+	}
+	
+	@IBInspectable
+	var paddingRight: CGFloat {
+		set { textEdgeInsets.right = newValue }
+		get { return textEdgeInsets.right }
+	}
+	
+	@IBInspectable
+	var paddingTop: CGFloat {
+		set { textEdgeInsets.top = newValue }
+		get { return textEdgeInsets.top }
+	}
+	
+	@IBInspectable
+	var paddingBottom: CGFloat {
+		set { textEdgeInsets.bottom = newValue }
+		get { return textEdgeInsets.bottom }
+	}
+}
 
-	override var intrinsicContentSize: CGSize {
-		get {
-			var contentSize = super.intrinsicContentSize
-			contentSize.height += topInset + bottomInset
-			contentSize.width += leftInset + rightInset
-			return contentSize
-		}
+extension UIEdgeInsets {
+	func inverted() -> UIEdgeInsets {
+		return UIEdgeInsets(top: -top, left: -left, bottom: -bottom, right: -right)
 	}
 }

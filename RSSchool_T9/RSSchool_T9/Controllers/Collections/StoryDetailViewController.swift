@@ -53,10 +53,10 @@ class StoryDetailViewController: DetailViewController {
 		contentText.numberOfLines = 0
 		contentText.lineBreakMode = .byWordWrapping
 		contentText.contentMode = .topRight
-		contentText.topInset = 30
-		contentText.bottomInset = 30
-		contentText.leftInset = 30
-		contentText.rightInset = 40
+		contentText.paddingTop = 30
+		contentText.paddingBottom = 30
+		contentText.paddingLeft = 30
+		contentText.paddingRight = 40
 		contentText.backgroundColor = UIColor.detailBackground
 		contentText.layer.cornerRadius = 8
 		contentText.layer.borderWidth = 1
@@ -68,9 +68,9 @@ class StoryDetailViewController: DetailViewController {
 	
 	public func update(withContent content: Story) {
 		coverView.imageView.image = content.coverImage
-		coverView.title.text = content.title
+		coverView.title.text = content.title.trimmingCharacters(in: .newlines)
 		coverView.typeLabel.text = content.type
-		contentText.text = content.text
+		contentText.text = content.text.trimmingCharacters(in: .newlines)
 		strokeCollectionView.paths = content.paths
 	}
 }

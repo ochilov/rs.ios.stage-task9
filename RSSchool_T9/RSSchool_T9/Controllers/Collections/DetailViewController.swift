@@ -57,7 +57,7 @@ class DetailViewController: UIViewController {
 			contentView.leadingAnchor.constraint(equalTo: layoutGuide.leadingAnchor, constant: edgeMargin),
 			contentView.trailingAnchor.constraint(equalTo: layoutGuide.trailingAnchor, constant: -edgeMargin),
 			contentView.topAnchor.constraint(equalTo: coverView.bottomAnchor, constant: 10),
-			contentView.bottomAnchor.constraint(equalTo: layoutGuide.bottomAnchor),
+			contentView.bottomAnchor.constraint(equalTo: layoutGuide.bottomAnchor, constant: -edgeMargin),
 			// we want vertical scrolling, so we want our content to be only as wide as
 			// the scroll view's Frame Layout Guide
 			contentView.widthAnchor.constraint(equalTo: scrollView.frameLayoutGuide.widthAnchor, constant: -edgeMargin*2),
