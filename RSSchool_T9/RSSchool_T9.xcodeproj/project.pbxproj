@@ -26,6 +26,12 @@
 		2BB9F31026AF5FB300F43852 /* s4-text.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2BB9F30F26AF5FB300F43852 /* s4-text.txt */; };
 		2BB9F31226AF5FBE00F43852 /* s4-title.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2BB9F31126AF5FBE00F43852 /* s4-title.txt */; };
 		B215495B26B9DF4000B70B62 /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B215495A26B9DF4000B70B62 /* ImageScrollView.swift */; };
+		B215495E26BA6FC500B70B62 /* story-5-path.swift in Sources */ = {isa = PBXBuildFile; fileRef = B215495D26BA6FC500B70B62 /* story-5-path.swift */; };
+		B215496126BA70C100B70B62 /* s5-text.txt in Resources */ = {isa = PBXBuildFile; fileRef = B215495F26BA70C000B70B62 /* s5-text.txt */; };
+		B215496226BA70C100B70B62 /* s5-title.txt in Resources */ = {isa = PBXBuildFile; fileRef = B215496026BA70C100B70B62 /* s5-title.txt */; };
+		B215496726BA973A00B70B62 /* story-6-path.swift in Sources */ = {isa = PBXBuildFile; fileRef = B215496426BA973A00B70B62 /* story-6-path.swift */; };
+		B215496826BA973A00B70B62 /* s6-title.txt in Resources */ = {isa = PBXBuildFile; fileRef = B215496526BA973A00B70B62 /* s6-title.txt */; };
+		B215496926BA973A00B70B62 /* s6-text.txt in Resources */ = {isa = PBXBuildFile; fileRef = B215496626BA973A00B70B62 /* s6-text.txt */; };
 		B2BA3BAE26B4B802001AA6D6 /* StrokeColorsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2BA3BAD26B4B802001AA6D6 /* StrokeColorsViewController.m */; };
 		B2BA3BB126B4BF2C001AA6D6 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA3BB026B4BF2C001AA6D6 /* UIColor+Extensions.swift */; };
 		B2BA3BB326B540EA001AA6D6 /* RSSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA3BB226B540EA001AA6D6 /* RSSettings.swift */; };
@@ -65,6 +71,12 @@
 		2BB9F30F26AF5FB300F43852 /* s4-text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "s4-text.txt"; sourceTree = "<group>"; };
 		2BB9F31126AF5FBE00F43852 /* s4-title.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "s4-title.txt"; sourceTree = "<group>"; };
 		B215495A26B9DF4000B70B62 /* ImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
+		B215495D26BA6FC500B70B62 /* story-5-path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "story-5-path.swift"; sourceTree = "<group>"; };
+		B215495F26BA70C000B70B62 /* s5-text.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "s5-text.txt"; sourceTree = "<group>"; };
+		B215496026BA70C100B70B62 /* s5-title.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "s5-title.txt"; sourceTree = "<group>"; };
+		B215496426BA973A00B70B62 /* story-6-path.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "story-6-path.swift"; sourceTree = "<group>"; };
+		B215496526BA973A00B70B62 /* s6-title.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "s6-title.txt"; sourceTree = "<group>"; };
+		B215496626BA973A00B70B62 /* s6-text.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "s6-text.txt"; sourceTree = "<group>"; };
 		B2BA3BAC26B4B802001AA6D6 /* StrokeColorsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StrokeColorsViewController.h; sourceTree = "<group>"; };
 		B2BA3BAD26B4B802001AA6D6 /* StrokeColorsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StrokeColorsViewController.m; sourceTree = "<group>"; };
 		B2BA3BB026B4BF2C001AA6D6 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
@@ -143,6 +155,8 @@
 		2BB9F29226AE017D00F43852 /* Static */ = {
 			isa = PBXGroup;
 			children = (
+				B215496326BA963D00B70B62 /* story-6 */,
+				B215495C26BA6DBC00B70B62 /* story-5 */,
 				2BB9F30C26AF5F9C00F43852 /* story-4 */,
 				2BB9F30326AF5D7E00F43852 /* story-3 */,
 				2BB9F2FC26AF554C00F43852 /* story-2 */,
@@ -189,6 +203,26 @@
 				2BB9F31126AF5FBE00F43852 /* s4-title.txt */,
 			);
 			path = "story-4";
+			sourceTree = "<group>";
+		};
+		B215495C26BA6DBC00B70B62 /* story-5 */ = {
+			isa = PBXGroup;
+			children = (
+				B215495F26BA70C000B70B62 /* s5-text.txt */,
+				B215496026BA70C100B70B62 /* s5-title.txt */,
+				B215495D26BA6FC500B70B62 /* story-5-path.swift */,
+			);
+			path = "story-5";
+			sourceTree = "<group>";
+		};
+		B215496326BA963D00B70B62 /* story-6 */ = {
+			isa = PBXGroup;
+			children = (
+				B215496626BA973A00B70B62 /* s6-text.txt */,
+				B215496526BA973A00B70B62 /* s6-title.txt */,
+				B215496426BA973A00B70B62 /* story-6-path.swift */,
+			);
+			path = "story-6";
 			sourceTree = "<group>";
 		};
 		B2BA3BA626B4AFAE001AA6D6 /* Models */ = {
@@ -315,6 +349,7 @@
 			files = (
 				2BB9E76826AB605900112651 /* LaunchScreen.storyboard in Resources */,
 				2BB9F30726AF5D9D00F43852 /* s3-text.txt in Resources */,
+				B215496926BA973A00B70B62 /* s6-text.txt in Resources */,
 				2BB9F30926AF5DAF00F43852 /* s3-title.txt in Resources */,
 				2BB9F31226AF5FBE00F43852 /* s4-title.txt in Resources */,
 				2BB9F29526AE01A300F43852 /* s1-title.txt in Resources */,
@@ -323,7 +358,10 @@
 				2BB9E76526AB605900112651 /* Assets.xcassets in Resources */,
 				2BB9F30226AF57B500F43852 /* s2-text.txt in Resources */,
 				2BB9E76326AB605700112651 /* Main.storyboard in Resources */,
+				B215496226BA70C100B70B62 /* s5-title.txt in Resources */,
 				2BB9F29726AE01B800F43852 /* s1-text.txt in Resources */,
+				B215496826BA973A00B70B62 /* s6-title.txt in Resources */,
+				B215496126BA70C100B70B62 /* s5-text.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +382,7 @@
 				B2D4015326B3CA1A00C7F11C /* SettingsViewController.m in Sources */,
 				B2BA3BC726B759FE001AA6D6 /* StoryDetailViewController.swift in Sources */,
 				B2BA3BBA26B5ECA2001AA6D6 /* GradientView.swift in Sources */,
+				B215495E26BA6FC500B70B62 /* story-5-path.swift in Sources */,
 				B2BA3BCB26B7E748001AA6D6 /* RSStrokeCollectionView.swift in Sources */,
 				B2BA3BB826B5DD6D001AA6D6 /* CollectionViewItemCell.swift in Sources */,
 				2BB9F30B26AF5EEC00F43852 /* story-3-path.swift in Sources */,
@@ -351,6 +390,7 @@
 				2BB9F29126ADFAF100F43852 /* Data.swift in Sources */,
 				B2BA3BC126B6E608001AA6D6 /* DetailCoverView.swift in Sources */,
 				2BB9F2EC26AF1F6200F43852 /* story-1-path.swift in Sources */,
+				B215496726BA973A00B70B62 /* story-6-path.swift in Sources */,
 				B2BA3BB126B4BF2C001AA6D6 /* UIColor+Extensions.swift in Sources */,
 				2BB9F30E26AF5FA900F43852 /* story-4-path.swift in Sources */,
 				2BB9E75E26AB605700112651 /* SceneDelegate.swift in Sources */,
